@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protect San Diego Humane Society</title>
+  <script>
+    function sendEmail() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = encodeURIComponent("Please Reconsider Budget Cuts to San Diego Humane Society");
+      const body = encodeURIComponent(`Dear Mayor Todd Gloria,
+
+I'm writing as a concerned San Diego resident and animal advocate to express my deep concern regarding the proposed budget cuts to the San Diego Humane Society.
+
+These cuts would significantly undermine the Humane Society's ability to perform vital services that directly benefit our community - including animal rescue, cruelty investigations, public safety response, wildlife care, and shelter operations. The Humane Society is not just an animal welfare organization; it's a public safety partner and a trusted resource for thousands of San Diegans.
+
+Reducing their funding could lead to more stray and abandoned animals on the streets, fewer cruelty cases investigated, and more pressure on an already burdened system. The consequences would ripple far beyond the organization itself - impacting our neighborhoods, our environment, and our most vulnerable animals.
+
+I strongly urge you and your administration to reconsider these proposed cuts and explore alternative solutions that will allow the San Diego Humane Society to continue its essential work without interruption. Their efforts make San Diego a more compassionate, safe, and humane city and they deserve our full support.
+
+Thank you for your time and for your continued leadership.
+
+Sincerely,
+${name}
+${email}`);
+      window.location.href = `mailto:mayortoddgloria@sandiego.gov?subject=${subject}&body=${body}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Email Mayor Todd Gloria on behalf of San Diego Humane Society</h2><br>
+  <p>Fill out your info below to send a pre-written email urging him to protect funding for the San Diego Humane Society: <br>
+Dear Mayor Todd Gloria, <br>
+
+I'm writing as a concerned San Diego resident and animal advocate to express my deep concern regarding the proposed budget cuts to the San Diego Humane Society.
+
+These cuts would significantly undermine the Humane Society's ability to perform vital services that directly benefit our community - including animal rescue, cruelty investigations, public safety response, wildlife care, and shelter operations. The Humane Society is not just an animal welfare organization; it's a public safety partner and a trusted resource for thousands of San Diegans.
+
+Reducing their funding could lead to more stray and abandoned animals on the streets, fewer cruelty cases investigated, and more pressure on an already burdened system. The consequences would ripple far beyond the organization itself - impacting our neighborhoods, our environment, and our most vulnerable animals.
+
+I strongly urge you and your administration to reconsider these proposed cuts and explore alternative solutions that will allow the San Diego Humane Society to continue its essential work without interruption. Their efforts make San Diego a more compassionate, safe, and humane city and they deserve our full support.
+
+Thank you for your time and for your continued leadership.</p>
+  <form onsubmit="sendEmail(); return false;">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <button type="submit">Send Email</button>
+  </form>
+</body>
+</html>
